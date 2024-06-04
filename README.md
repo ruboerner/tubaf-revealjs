@@ -7,7 +7,7 @@
 quarto use template ruboerner/tubaf-revealjs
 ```
 
-This will install the extension and create an example qmd file that you can use as a starting place for your article.
+This will install the extension and create an example qmd file that you can use as a starting place for your slides.
 
 ## Using
 
