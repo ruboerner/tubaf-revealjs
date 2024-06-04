@@ -8,4 +8,6 @@ contributes:
       theme: [dark, custom.scss]
       width: 1280
       height: 720
-      logo: ./assets/TUBAF_logo.svg
+      logo: TUBAF_logo.svg
+      title-slide-attributes:
+        data-background-image: TUBAF_title.svg
