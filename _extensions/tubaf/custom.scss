@@ -86,6 +86,10 @@ $font-family-sans-serif: 'Arial', sans-serif;
     pointer-events: none;
 }
 
+.reveal .slide-menu-button > * {
+    pointer-events: auto;
+  }
+
 .math.display {
     color: #000000 !important;
 }
