@@ -4,8 +4,6 @@ subtitle: Here a subtitle
 format: tubaf-revealjs
 author: Ralph-Uwe Börner
 date: last-modified
-title-slide-attributes: 
-  data-background-image: ./assets/title_01.svg
 ---
 
 ## Introduction
