@@ -1,5 +1,7 @@
 # Quarto TUBAF reveal.js theme (unofficial) 
 
+![](screenshot.png)
+
 ## Installing
 
 
