@@ -1,4 +1,4 @@
-# Quarto TUBAF theme
+# Quarto TUBAF reveal.js theme (unofficial) 
 
 ## Installing
 
