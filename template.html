@@ -12,7 +12,7 @@
 
   <meta name="author" content="Ralph-Uwe Börner">
   <meta name="dcterms.date" content="2024-06-04">
-  <title>TUBAF style</title>
+  <title>reveal.js TUBAF</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,11 +30,78 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto.css">
   <link href="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="template_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="template_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="template_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="template_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -326,9 +393,9 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="./assets/title_01.svg" class="quarto-title-block center">
-  <h1 class="title">TUBAF style</h1>
-  <p class="subtitle">Here a subtitle</p>
+<section id="title-slide" data-background-image="_extensions/tubaf/TUBAF_title.svg" class="quarto-title-block center">
+  <h1 class="title">reveal.js TUBAF</h1>
+  <p class="subtitle">A customized TU Bergakademie Freiberg theme for Quarto slides</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -340,9 +407,68 @@ Ralph-Uwe Börner
 
   <p class="date">2024-06-04</p>
 </section>
-<section id="introduction" class="slide level2">
-<h2>Introduction</h2>
-<p><em>TODO</em> Create an example file that demonstrates the formatting and features of your format.</p>
+<section id="editing-the-presentation" class="slide level2">
+<h2>Editing the presentation</h2>
+<h3 id="edit-the-title-slide">Edit the title slide</h3>
+<p>The information shown in the title slide can be edited by changing the metadata in <code>template.qmd</code>.</p>
+</section>
+<section id="navigation" class="slide level2">
+<h2>Navigation</h2>
+<p>Navigation is mostly done via keyboard shortcuts.</p>
+<ul>
+<li>Use spacebar, or vim bindings <code>j</code>, <code>k</code>, <code>h</code>, <code>l</code>, for navigation between slides.</li>
+<li><code>m</code> to open menu bar for other presentation tools.</li>
+</ul>
+</section>
+<section id="overview-and-zoom" class="slide level2">
+<h2>Overview and Zoom</h2>
+<p>Press <code>o</code> to toggle overview mode.</p>
+<p><br></p>
+<p>Hold down the <code>Alt</code> key (or <code>Option</code> on MacOS) and click on any element to zoom towards it—try it now on this slide.</p>
+</section>
+<section id="speaker-view" class="slide level2">
+<h2>Speaker View</h2>
+<p>Press <code>s</code> (or use the presentation menu) to open speaker view</p>
+<aside class="notes">
+<p>Speaker notes go here.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="latex-equations" class="slide level2">
+<h2>LaTeX Equations</h2>
+<p><a href="https://www.mathjax.org/">MathJax</a> rendering of equations to HTML.</p>
+<p>Equation label and reference are supported too. For example, <a href="#/latex-equations" class="quarto-xref">Equation&nbsp;1</a> shows</p>
+<p><span id="eq-sincos"><span class="math display">\[
+1=\cos^2 x + \sin^2 x
+\qquad(1)\]</span></span></p>
+<p>This is done via:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href=""></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-2"><a href=""></a><span class="ss">1=</span><span class="sc">\cos</span><span class="ss">^2 x + </span><span class="sc">\sin</span><span class="ss">^2 x</span></span>
+<span id="cb1-3"><a href=""></a><span class="kw">\end</span>{<span class="ex">equation</span>}{#eq-sincos}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Referencing the equation is as simple as <code>@eq-sincos</code>.</p>
+</section>
+<section id="incremental-lists" class="slide level2">
+<h2>Incremental Lists</h2>
+<p>Lists can optionally be displayed incrementally:</p>
+<div>
+<ul>
+<li class="fragment">First item</li>
+<li class="fragment">Second item</li>
+<li class="fragment">Third item</li>
+</ul>
+</div>
+<div class="fragment">
+<p><br> Insert pauses to make other types of content display incrementally.</p>
+</div>
 </section>
 <section id="more-information" class="slide level2">
 <h2>More Information</h2>
@@ -364,6 +490,7 @@ Ralph-Uwe Börner
   <script src="template_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="template_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="template_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="template_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -384,7 +511,8 @@ Ralph-Uwe Börner
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -555,7 +683,7 @@ Ralph-Uwe Börner
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

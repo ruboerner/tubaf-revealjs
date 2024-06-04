@@ -6,6 +6,7 @@ contributes:
   formats:
     revealjs:
       theme: [dark, custom.scss]
+      chalkboard: true
       width: 1280
       height: 720
       logo: TUBAF_logo.svg
