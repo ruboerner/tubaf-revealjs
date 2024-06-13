@@ -63,6 +63,7 @@ $font-family-sans-serif: 'Arial', sans-serif;
     width: 140px !important;
     max-width: unset !important;
     max-height: unset !important;
+    z-index: -999 !important;
 }
 
 .reveal h2 {
