@@ -1,6 +1,6 @@
 ---
 title: "reveal.js TUBAF"
-subtitle: "A customized TU Bergakademie Freiberg theme for Quarto slides"
+subtitle: "A customized theme for Quarto slides"
 format: tubaf-revealjs
 author: Ralph-Uwe Börner
 date: last-modified
@@ -26,7 +26,7 @@ Press `o` to toggle overview mode.
 
 <br/>
 
-Hold down the `Alt` key (or `Option` on MacOS) and click on any element to zoom towards it---try it now on this slide.
+Hold down `Alt` on Windows, `Option` on macOS, or `Ctrl` on Linux, and click on any element to zoom in on it.
 
 ## Speaker View
 
@@ -49,10 +49,10 @@ $${#eq-sincos}
 
 This is done via:
 
-```tex
-\begin{equation}
+```markdown
+$$
 1=\cos^2 x + \sin^2 x
-\end{equation}{#eq-sincos}
+$${#eq-sincos}
 ```
 
 Referencing the equation is as simple as `@eq-sincos`.
